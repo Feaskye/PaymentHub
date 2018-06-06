@@ -10,7 +10,6 @@ namespace PaymentHub.AlipayCore
     {
         public static IApplicationBuilder UseAlipay(IApplicationBuilder app,IConfigurationSection section)
         {
-            PaymentHubAlipay.Configure(section);
             app.UseMiddleware<PaymentHubAlipay>();
             return app;
         }
