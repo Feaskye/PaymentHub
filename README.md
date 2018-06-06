@@ -7,7 +7,7 @@ Now, Alipay for .net core middleware
 coding ...
 
 ## 依赖说明
-###支付类库会以中间件Nuget包的形式存在：
+### 支付类库会以中间件Nuget包的形式存在：
 IAppBuilder安装依赖Microsoft.AspNetCore.Http.Abstractions命令：
 ```
 	Install-Package Microsoft.AspNetCore.Http.Abstractions -Version 2.1.0
