@@ -11,19 +11,29 @@ namespace PaymentHub.AlipayCore
     public class PaymentHubAlipay
     {
         //配置
-        private IConfigurationSection _config;
+        private static IConfigurationSection _config;
         //日志
-        private ILogger _logger;
-        public PaymentHubAlipay(IConfigurationSection section, ILoggerFactory loggerFactory)
+        private static ILogger _logger;
+        private RequestDelegate _next;
+        public PaymentHubAlipay(RequestDelegate next,IConfigurationSection section, ILoggerFactory loggerFactory)
         {
+            _next = next;
             _config = section;
             _logger = loggerFactory.CreateLogger<PaymentHubAlipay>();
         }
 
         public async Task Invoke(HttpContext httpContext)
         {
-
+            await _next(httpContext);
         }
+
+        public static AlipayClient AlipayClient
+        {
+            get {
+                return AlipayClient
+            }
+        }
+
 
         //发起支付
 

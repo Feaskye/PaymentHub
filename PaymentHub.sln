@@ -47,6 +47,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "alipaytrade", "..\..\..\ali
 		SlnRelativePath = "..\..\..\alipaytrade\"
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyCoreLib.Payments", "SkyCoreLib.Payments\SkyCoreLib.Payments.csproj", "{437067E0-BAEC-4E4E-B34E-7B337255C279}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -77,6 +79,10 @@ Global
 		{8C3C6AD3-7C15-4982-ADED-626B8CF1189F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C3C6AD3-7C15-4982-ADED-626B8CF1189F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C3C6AD3-7C15-4982-ADED-626B8CF1189F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{437067E0-BAEC-4E4E-B34E-7B337255C279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437067E0-BAEC-4E4E-B34E-7B337255C279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437067E0-BAEC-4E4E-B34E-7B337255C279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437067E0-BAEC-4E4E-B34E-7B337255C279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
