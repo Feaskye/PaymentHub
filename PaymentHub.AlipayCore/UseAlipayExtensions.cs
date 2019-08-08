@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ namespace PaymentHub.AlipayCore
 {
     public class UseAlipayExtensions
     {
+        
+
         public static IApplicationBuilder UseAlipay(IApplicationBuilder app,IConfigurationSection section)
         {
             app.UseMiddleware<PaymentHubAlipay>();

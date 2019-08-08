@@ -11,7 +11,7 @@ namespace SkyCoreLib.Payments {
         /// 创建支付服务
         /// </summary>
         /// <param name="way">支付方式</param>
-        IPayService CreatePayService( PayWay way );
+        IPayService CreatePayService( PayWay way);
         /// <summary>
         /// 创建支付宝回调通知服务
         /// </summary>
