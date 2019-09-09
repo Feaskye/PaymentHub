@@ -17,20 +17,20 @@ namespace PaymentHub.AlipayCore
             AlipayConfig.Key = key;
         }
 
-        public void DirectPay(DirectPay payData)
+        public string DirectPay(DirectPay payData)
         {
-            this.PayAndRedirect(payData.BuildRequestData());
+            return this.PayAndRedirect(payData.BuildRequestData());
         }
 
-        private void PayAndRedirect(SortedDictionary<string, string> sParaTemp)
+        private string PayAndRedirect(SortedDictionary<string, string> sParaTemp)
         {
-            string s = AlipaySubmit.BuildRequest(sParaTemp, "get", "确认");
-            PaymentHubAlipay.HttpContext.Response.WriteAsync(s);
+            return AlipaySubmit.BuildRequest(sParaTemp, "get", "确认");
+            //PaymentHubAlipay.HttpContext.Response.WriteAsync(s);
         }
 
-        public void TradeCreateByBuyer(TradeCreateByBuyer payData)
+        public string TradeCreateByBuyer(TradeCreateByBuyer payData)
         {
-            this.PayAndRedirect(payData.BuildRequestData());
+            return this.PayAndRedirect(payData.BuildRequestData());
         }
     }
 

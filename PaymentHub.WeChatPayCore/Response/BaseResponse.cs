@@ -68,7 +68,12 @@ namespace PaymentHub.WeChatPayCore.Response
         [XmlElement(ElementName = "err_code_des")]
         public string ErrCodeDesc { get;  set; }
         [XmlIgnore]
-        public bool IsSuccess { get; }
+        public bool IsSuccess {
+            get
+            {
+                return ResultCode == "SUCCESS" && ReturnCode == "SUCCESS";
+            }
+        }
     }
 
     [XmlRoot("xml")]
